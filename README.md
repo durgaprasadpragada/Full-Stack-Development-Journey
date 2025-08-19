@@ -1,4 +1,4 @@
-# 🌐 Full Stack Development Learning Journey
+# 🌐 Full Stack Development Journey
 
 Welcome to my **Full Stack Development Journey** repository! 🚀  
 This repo documents my path as I learn **frontend, backend, and full stack development**, with step-by-step progress, examples, and notes.  
