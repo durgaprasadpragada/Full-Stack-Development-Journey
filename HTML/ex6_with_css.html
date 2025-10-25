@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Links & Navigation Demo</title>
+  <style>
+    nav {
+      background-color: #f4f4f8;
+      padding: 10px;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 20px;
+    }
+    nav li {
+      display: inline;
+    }
+    nav a {
+      text-decoration: none;
+      color: #1a237e;
+      font-weight: bold;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background: #bbdefb;
+      color: #1565c0;
+    }
+    section {
+      margin-top: 60px;
+    }
+    .contact-info {
+      margin-top: 30px;
+      font-style: italic;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="https://google.com" target="_blank">Search Google</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="mailto:test@example.com">Email Us</a></li>
+      <li><a href="tel:123456789">Call Us</a></li>
+    </ul>
+  </nav>
+  
+  <section>
+    <h1>Welcome!</h1>
+    <p>This site demonstrates HTML links and navigation best practices.</p>
+  </section>
+  
+  <section id="about">
+    <h2>About Section</h2>
+    <p>This is the section you'll jump to when clicking "About" in the menu above.</p>
+    <div class="contact-info">
+      Contact us by email or call using the links above!
+    </div>
+  </section>
+</body>
+</html>
