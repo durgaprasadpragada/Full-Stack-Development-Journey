@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Colors and Backgrounds Dmo</title>
+    <style>
+        body {
+            background-color: #f7c9c7;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #2196f3;
+        }
+
+        p {
+            color: #494949;
+            background-color: #e3f2fd;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        .highlight {
+            background-color: #ffd54f;
+            color: #333;
+        }
+
+        .gradient-box {
+            background: linear-gradient(90deg, red 0%, yellow 100%);
+            color: white;
+            padding: 24px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .image-bg {
+            background-image: url('https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=400');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 24px;
+            border-radius: 30px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Colors & Backgrounds</h1>
+
+    <p>This paragraph has a light blue background and dark text color.</p>
+    <p class="highlight">This is a highlighted section using the <b> .highlight</b> class.</p>
+
+    <div class="gradient-box">
+        This box uses a linear gradient background.
+    </div>
+
+    <div class="image-bg">
+        This box uses an image as a background. Try resizing your window!
+    </div>
+</body>
+
+</html>
