@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Display & Position Example</title>
+    <style>
+        .block {
+            display: block;
+            background: #ffd54f;
+            margin-bottom: 10px;
+            padding: 8px;
+        }
+
+        .inline {
+            display: inline;
+            background: #90caf9;
+            padding: 3px 10px;
+            margin-right: 5px;
+        }
+
+        .inline-block {
+            display: inline-block;
+            background: #b9f6ca;
+            padding: 8px;
+            margin: 4px;
+        }
+
+        .rel {
+            position: relative;
+            left: 30px;
+            top: 10px;
+            background: #ffecb3;
+            width: 120px;
+        }
+
+        .abs {
+            position: absolute;
+            top: 60px;
+            left: 200px;
+            background: #ffcdd2;
+            width: 120px;
+            z-index: 2;
+        }
+
+        .fixed {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: #c5e1a5;
+            padding: 6px 12px;
+            z-index: 10;
+        }
+
+        .container {
+            position: relative;
+            height: 180px;
+            border: 1px solid #333;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Display, Position & Z-Index</h1>
+
+    <div class="block">I am a block element</div>
+    <span class="inline">Inline</span>
+    <span class="inline">Inline</span>
+    <span class="inline">Inline</span>
+    <div class="inline-block">Inline-block</div>
+    <div class="inline-block">Inline-block</div>
+
+    <div class="container">
+        <div class="rel">Relative</div>
+        <div class="abs">Absolute (inside relative parent)</div>
+    </div>
+
+    <div class="fixed">Fixed position (try scrolling!)</div>
+</body>
+
+</html>
