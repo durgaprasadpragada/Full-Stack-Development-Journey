@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Flexbox Demo</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            /* Items stay in a row */
+            justify-content: space-between;
+            /* Spread items out */
+            align-items: center;
+            /* Vertically center items */
+            gap: 20px;
+            border: 2px solid #2196f3;
+            padding: 15px;
+            margin: 30px 0;
+        }
+
+        .item {
+            background: #e3f2fd;
+            color: #333;
+            padding: 30px;
+            border-radius: 7px;
+            width: 120px;
+            text-align: center;
+            font-size: 1.2em;
+            flex-grow: 1;
+        }
+
+        .tall {
+            height: 80px;
+            align-self: flex-end;
+            background: #ffcdd2;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Day 13: CSS Flexbox</h1>
+    <div class="container">
+        <div class="item">One</div>
+        <div class="item tall">Two (tall)</div>
+        <div class="item">Three</div>
+    </div>
+</body>
+
+</html>
