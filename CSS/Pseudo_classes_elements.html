@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>CSS Pseudo-classes & -elements Demo</title>
+    <style>
+        /* Pseudo-class (hover & focus) */
+        button:hover {
+            background: #ffb300;
+            color: #fff;
+        }
+
+        input:focus {
+            border: 2px solid #1e88e5;
+            background: #e3f2fd;
+        }
+
+        /* Pseudo-class (first-child) */
+        ul li:first-child {
+            font-weight: bold;
+            color: #c2185b;
+        }
+
+        ul li:last-child {
+            text-decoration: underline;
+        }
+
+        /* Pseudo-element (before/after) */
+        h2::before {
+            content: "✨ ";
+            color: #ff9800;
+        }
+
+        h2::after {
+            content: " 👈";
+            color: #1976d2;
+        }
+
+        /* Pseudo-element (first-letter) */
+        p::first-letter {
+            font-size: 2em;
+            color: #f44336;
+        }
+
+        /* Pseudo-element (first-line) */
+        p::first-line {
+            background: #fff9c4;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Pseudo-classes & Pseudo-elements</h1>
+    <h2>Heading with before & after</h2>
+    <ul>
+        <li>First item (first-child)</li>
+        <li>Second item</li>
+        <li>Third item (last-child)</li>
+    </ul>
+    <input type="text" placeholder="Focus on me">
+    <br><br>
+    <button>Hover over me!</button>
+    <p>This paragraph demonstrates styling the first letter and firstline. The start is large and red!</p>
+</body>
+
+</html>
