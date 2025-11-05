@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Transitions & Animations Demo</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: rgb(67, 67, 167);
+            border-radius: 10px;
+            margin: 50px auto;
+            transition: background 0.8s, transform 0.5s;
+        }
+
+        .box:hover {
+            background: yellow;
+            transform: scale(1.15) rotate(8deg);
+        }
+
+        .animated {
+            width: 100px;
+            height: 100px;
+            background: #26c6da;
+            border-radius: 10px;
+            margin: 50px auto;
+            animation: movebox 2s infinite alternate;
+        }
+
+        @keyframes movebox {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(120px) scale(1.2);
+                background: #ab47bc;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Transitions & Animations</h1>
+    <div class="box"></div>
+    <p>Hover the purple box above!</p>
+    <div class="animated"></div>
+    <p>The blue box animates left and changes color.</p>
+</body>
+
+</html>
