@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width initial-scale=1.0">
     <title>CSS Pseudo-classes & -elements Demo</title>
     <style>
-        /* Pseudo-class (hover & focus) */
         button:hover {
             background: #ffb300;
             color: #fff;
@@ -14,10 +13,9 @@
 
         input:focus {
             border: 2px solid #1e88e5;
-            background: #e3f2fd;
+            background: #f1ee56;
         }
 
-        /* Pseudo-class (first-child) */
         ul li:first-child {
             font-weight: bold;
             color: #c2185b;
@@ -27,24 +25,21 @@
             text-decoration: underline;
         }
 
-        /* Pseudo-element (before/after) */
         h2::before {
-            content: "✨ ";
+            content: "before🌟";
             color: #ff9800;
         }
 
         h2::after {
-            content: " 👈";
+            content: "🔥after";
             color: #1976d2;
         }
 
-        /* Pseudo-element (first-letter) */
-        p::first-letter {
+        p::first-line {
             font-size: 2em;
             color: #f44336;
         }
 
-        /* Pseudo-element (first-line) */
         p::first-line {
             background: #fff9c4;
         }
