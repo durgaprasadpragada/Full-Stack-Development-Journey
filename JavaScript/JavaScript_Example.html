@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java script example</title>
+    <style>
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+
+        button {
+            padding: 8px 16px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Java-Script Example</h1>
+    <p id="greetings">Welcome! Press the button to change the message.</p>
+    <button onclick="sayGreetings()">Say Greetings</button>
+
+    <h2>----Counter Example----</h2>
+    <p id="counter">Counter : 0</p>
+    <button onclick="setCounter()">Increase</button>
+    <button onclick="resetCounter()">Reset</button>
+    <script>
+        function sayGreetings() {
+            document.getElementById("greetings").innerText = "Hello! JavaScript...";
+            document.getElementById("greetings").classList.add("highlight");
+        }
+        count = 0;
+        function setCounter() {
+            count++;
+            document.getElementById("counter").innerText = "Counter :" + count;
+        }
+        function resetCounter() {
+            count = 0;
+            document.getElementById("counter").innerText = "Counter :" + count;
+        }
+    </script>
+</body>
+
+</html>
