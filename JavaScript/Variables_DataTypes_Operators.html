@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>varibales in java script</title>
+</head>
+
+<body>
+    <h1 align="center">Variables in JavaScript</h1>
+    <div id="output"></div>
+    <script>
+        //Variable declarations
+        let username = "Prasad";
+        const year = 2025;
+        let score = 25;
+        let isMemeber = true;
+
+        //Operators
+        score = score + 5;
+        let message = username + " scored " + score + " points.";
+
+        //Data types
+        let numbers = [11, 22, 33, 44, 55];
+        let user = { name: "Phani", active: true };
+
+        //Output
+        document.getElementById('output').innerHTML =
+            "<b>Name:</b> " + username + "<br>" +
+            "<b>Year:</b> " + year + "<br>" +
+            "<b>Score:</b> " + score + "<br>" +
+            "<b>Active member?</b> " + isMemeber + "<br>" +
+            "<b>Message:</b> " + message + "<br>" +
+            "<b>Numbers array:</b> " + numbers.join(",") + "<br>" +
+            "<b>User object:</b> name = " + user.name + ", active = " + user.active;
+    </script>
+</body>
+
+</html>
