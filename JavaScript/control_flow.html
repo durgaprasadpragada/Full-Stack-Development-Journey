@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>control statements</title>
+    <style>
+        button {
+            padding: 8px 14px;
+            margin: 10px;
+            color: rgb(179, 5, 5);
+        }
+    </style>
+</head>
+
+<body>
+    <h1 align="center">Control Statements</h1>
+    <button onclick="checkpass()">Check Pass</button>
+    <button onclick="shownumbers()">Show Numbers</button>
+    <div id="output"></div>
+    <button onclick="showAlphabets()">Show Alphabets</button>
+    <div id="alpha"></div>
+
+    <script>
+        let score = 73;
+
+        function checkpass() {
+            let result;
+            if (score >= 50) {
+                result = "Yoy passed! with score : " + score;
+            }
+            else {
+                result = "You failed! with score : " + score;
+            }
+            document.getElementById("output").innerText = result;
+        }
+
+        function shownumbers() {
+            let msg = "Numbers: ";
+            for (let i = 0; i <= 5; i++) {
+                msg += i + " ";
+            }
+            document.getElementById("output").innerText = msg;
+        }
+
+        function showAlphabets() {
+            let alphabets = "";
+            let charCode = 65; // ASCII code for 'A'
+            while (charCode <= 90) { // ASCII code for 'Z'
+                alphabets += String.fromCharCode(charCode) + " ";
+                charCode++;
+            }
+            document.getElementById("alpha").innerText = alphabets;
+        }
+    </script>
+
+</body>
+
+</html>
