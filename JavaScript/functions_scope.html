@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>functions and their scope</title>
+</head>
+
+<body>
+    <h1 align="center">Functions and Their Scope</h1>
+    <p id="result"></p>
+    <button onclick="showGreetings()">Show Greetings</button>
+    <button onclick="calculate()">Calculate Sum</button>
+
+    <script>
+        // Global variable
+        let user = "Prasad";
+
+        // Function definition
+        function showGreetings() {
+            document.getElementById("result").innerText = "Hello, " + user + "!";
+        }
+
+        // Function with parameters and return
+        function add(a, b) {
+            return a + b;
+        }
+
+        // Another function using local scope
+        function calculate() {
+            let num1 = 7;
+            let num2 = 5;
+            let sum = add(num1, num2);
+            document.getElementById("result").innerText = "Sum is : " + sum;
+        }
+    </script>
+</body>
+
+</html>
