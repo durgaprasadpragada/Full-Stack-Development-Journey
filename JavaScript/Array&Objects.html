@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Arrays & Objects Demo</title>
+</head>
+<body>
+  <h1>Day 22: Arrays & Objects</h1>
+  <button onclick="showColors()">Show Colors</button>
+  <button onclick="showUser()">Show User Info</button>
+  <div id="output"></div>
+
+  <script>
+    let colors = ["Red", "Green", "Blue", "Yellow"];
+    let user = {
+      name: "Prasad",
+      age: 21,
+      member: true
+    };
+
+    function showColors() {
+      let msg = "Colors: ";
+      for (let color of colors) {
+        msg += color + " ";
+      }
+      document.getElementById("output").innerText = msg;
+    }
+
+    function showUser() {
+      let msg = "User Info:\n";
+      for (let key in user) {
+        msg += key + ": " + user[key] + "\n";
+      }
+      document.getElementById("output").innerText = msg;
+    }
+  </script>
+</body>
+</html>
