@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Events & DOM Manipulation Demo</title>
+    <style>
+        .highlight {
+            color: #e91e63;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Events & DOM Manipulation</h1>
+    <button id="helloBtn">Say Hello</button>
+    <button id="colorBtn">Change Color</button>
+    <input type="text" id="inputBox" placeholder="Type here">
+    <div id="output"></div>
+
+    <script>
+        document.getElementById("helloBtn").onclick = function () {
+            document.getElementById("output").innerText = "Hello, welcome!";
+        };
+
+        document.getElementById("colorBtn").onclick = function () {
+            document.getElementById("output").classList.toggle("highlight");
+        };
+
+        document.getElementById("inputBox").oninput = function () {
+            document.getElementById("output").innerText = "You typed: " + this.value;
+        };
+    </script>
+</body>
+
+</html>
