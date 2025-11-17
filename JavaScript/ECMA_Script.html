@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ES6 Features Demo</title>
+</head>
+<body>
+  <h1>Day 24: Modern JavaScript (ES6)</h1>
+  <button onclick="showFeatures()">Show ES6 Features</button>
+  <div id="output"></div>
+
+  <script>
+    function showFeatures() {
+      // Arrow function, const, template literal, destructuring, spread
+      const arr = [10, 20, 30];
+      const doubled = arr.map(x => x * 2);
+
+      const user = { name: "Prasad", city: "Hyderabad" };
+      const { name, city } = user;
+
+      const greeting = `Hi, ${name} from ${city}!`;
+
+      const all = [...arr, 40, 50];
+
+      function sum(...nums) {
+        return nums.reduce((a, b) => a + b, 0);
+      }
+      let s = sum(1,2,3);
+
+      let msg = `
+        Doubled Array: ${doubled.join(", ")}<br>
+        Greeting: ${greeting}<br>
+        All numbers: ${all.join(", ")}<br>
+        Sum of 1,2,3: ${s}
+      `;
+      document.getElementById("output").innerHTML = msg;
+    }
+  </script>
+</body>
+</html>
