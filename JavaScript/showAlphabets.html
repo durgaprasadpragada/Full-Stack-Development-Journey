@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Alphabets with While Loop</title>
+</head>
+
+<body>
+    <h1>Show Alphabets with a While Loop</h1>
+    <button onclick="showAlphabets()">Show Alphabets</button>
+    <div id="output"></div>
+
+    <script>
+        function showAlphabets() {
+            let alphabets = "";
+            let charCode = 65; // ASCII code for 'A'
+            while (charCode <= 90) { // ASCII code for 'Z'
+                alphabets += String.fromCharCode(charCode) + " ";
+                charCode++;
+            }
+            document.getElementById("output").innerText = alphabets;
+        }
+    </script>
+</body>
+
+</html>
