@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" , content="width=device-width, initial-scale=1.0">
+    <title>javascript arrays and objects</title>
+    <style>
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Java-Script Arrays and Objects</h1>
+    <button onclick="showArray()">Show Cities</button>
+    <button onclick="showObject()">Show Details</button>
+    <div id="output"></div>
+
+    <script>
+        // Array Example
+        let cities = ["Vishakapatnam", "Tuni", "Hyderabad", "Annavaram"];
+        // Object Example
+        let book = {
+            name: "Java Script for Beginners",
+            author: "Prasad",
+            pages: 227
+        };
+
+        // Function to display array data
+        function showArray() {
+            // start with label
+            let msg = "Cities: "
+            // loop through array
+            for (let city of cities) {
+                // Add each city and a space
+                msg += city + " ";
+            }
+            // show result on page
+            document.getElementById("output").innerText = msg;
+        }
+
+        // Function to display object data
+        function showObject() {
+            // start with label
+            let msg = "Book Info: \n";
+            //loop through each property in object
+            for (let key in book) {
+                // add property name and value on a new line
+                msg += key + ": " + book[key] + "\n";
+            }
+            // show result on page
+            document.getElementById("output").innerText = msg;
+        }
+        document.getElementById("output").classList.toggle("highlight");
+    </script>
+</body>
+
+</html>
