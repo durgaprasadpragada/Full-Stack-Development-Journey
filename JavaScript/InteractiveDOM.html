@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DOM & Events Example</title>
+    <style>
+        .highlight {
+            color: #e91e63;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Interact with the DOM</h1>
+
+    <button id="greetBtn">Greet Me</button>
+    <button id="toggleBtn">Toggle Color</button>
+    <input id="nameInput" type="text" placeholder="Type your name">
+    <div id="output"></div>
+
+    <script>
+        // 1. Find the "Greet Me" button and set what happens when it's clicked.
+        document.getElementById("greetBtn").onclick = function () {
+            // 2. Find the input box, get its value (the name typed by the user).
+            let userName = document.getElementById("nameInput").value;
+            // 3. Create a message: if no name, default to "friend".
+            if (userName === '') userName = "friend";
+            let msg = "Hello, " + userName + "!";
+            // 4. Set the output div's text to the message.
+            document.getElementById("output").innerText = msg;
+        };
+
+        // 5. Find the "Toggle Color" button and set its click action.
+        document.getElementById("toggleBtn").onclick = function () {
+            // 6. Find the output div.
+            let outputDiv = document.getElementById("output");
+            // 7. Toggle the highlight class: add if missing, remove if present.
+            outputDiv.classList.toggle("highlight");
+        };
+
+        // 8. Whenever the input value changes, update the output live.
+        document.getElementById("nameInput").oninput = function () {
+            let name = this.value;
+            document.getElementById("output").innerText = "You typed: " + name;
+        };
+    </script>
+</body>
+
+</html>
